@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 2</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+
+      .container{
+        height: 100vh;
+        width: 100vw;
+        padding: 30px;
+        padding-bottom: 50px;
+      }
+
+      .container .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+
+      .container .title .content-1 {
+        font-weight: 700;
+        font-size: 32px;
+      }
+
+      .container .title .content-2 {
+        font-size: 20px;
+      }
+      .container .title .content-3 {
+        font-size: 20px;
+        margin-top: -20px;
+      }
+
+      .container .title .icon{
+        width: 56px;
+        height: 56px;
+      }
+
+      .container .title .icon img{
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper {
+        width: 1120px;
+        height: 426px;
+      }
+
+      .swiper-slide {
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        position: absolute;
+        border-radius: 15px;
+        width: 160px;
+        height: 369px;
+        object-fit: cover;
+      }
+
+      .swiper-button-next{
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      .swiper-button-prev{
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      .swiper-button-prev::after{
+       content: '';
+      }
+      .swiper-button-next::after{
+       content: '';
+      }    
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="container">
+        <div class="title">
+            <div class="icon">
+                <img src="https://shub.edu.vn/_next/image?url=%2Fimages%2Flanding%2Fver3%2Fimage-section%2Fnetworking.gif&w=64&q=75" />
+            </div>
+            <div class="content-1">Hoạt động tiêu biểu từ cộng đồng giáo dục</div>
+            <div class="content-2">Hình ảnh được chính những giáo viên từ khắp 3 miền ghi lại trong quá trình </div>
+            <div class="content-3" >giảng dạy, dạy học ứng dụng công nghệ SHub Classroom.</div>
+
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="top: 30px;"><img src="https://shub.edu.vn/images/landing/ver3/image-section/carousel1.png"></div>
+              <div class="swiper-slide"><img src="https://shub.edu.vn/images/landing/ver3/image-section/carousel2.png"></div>
+              <div class="swiper-slide" style="top: 30px;" ><img src="https://shub.edu.vn/images/landing/ver3/image-section/carousel3.png"></div>
+              <div class="swiper-slide"><img src="https://shub.edu.vn/images/landing/ver3/image-section/carousel4.png"></div>
+              <div class="swiper-slide" style="top: 30px;" ><img src="https://shub.edu.vn/images/landing/ver3/image-section/carousel5.png"></div>
+              <div class="swiper-slide"><img src="https://shub.edu.vn/images/landing/ver3/image-section/carousel6.png"></div>
+            </div>
+            <div class="swiper-button-next"><i style="color: #000;" class="fa-solid fa-arrow-right"></i></div>
+            <div class="swiper-button-prev"><i style="color: #000;" class="fa-solid fa-arrow-left"></i></div>
+          </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 5,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+      });
+      
+    </script>
+  </body>
+</html>
